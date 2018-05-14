@@ -21,16 +21,7 @@ namespace majasdarbs
                 sessijuSkaititajs++;
 				//------Viss izpildams kodz zemāk---------
 
-				Console.Write("Ievadi kādu ciparu faktoriālam: ");
-				int n = Convert.ToInt16(Console.ReadLine());
-				int fact = n;
-				for (int i = 1; i <n; i++)
-				{
-					fact = fact + i;
-					Console.WriteLine("{0} = {0} + {1}", fact, i);
-				}
-       
-				Console.WriteLine("{0}! = {1}", n, fact);
+				Faktorials();
 
                 //------Te izpildams kods beidzas---------
                 Console.WriteLine("----------------------------------------");
@@ -41,7 +32,23 @@ namespace majasdarbs
         }
         //-------Šeit sākas funkcijas---------
 
-        
+		static void Faktorials()
+		{
+			Console.Write("Ievadi kādu ciparu faktoriālam: ");
+
+			int vertiba = 0;
+			string ievade = Console.ReadLine();
+			int robeza = Convert.ToInt16(ievade);
+            
+			for (int i = 1; i <= robeza; i++)
+            {
+				int oldVertiba = vertiba;
+				vertiba = vertiba + i;
+				Console.WriteLine("{0} = {2} + {1}", vertiba, i, oldVertiba);
+            }
+
+			Console.WriteLine("{0}! = {1}", robeza, vertiba);
+		}
 
         static string Lietotajs(string lietotajs)
         {
