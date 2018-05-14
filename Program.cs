@@ -17,7 +17,7 @@ namespace majasdarbs
                 string currentUser = userId;
                 Console.WriteLine("Sessija numurs {0}, Lietotājs: {1}", sessijuSkaititajs, currentUser);
                 Console.WriteLine("---------------------------------------");
-                //if (sessijuSkaititajs == 1) { userId = Lietotajs(HelloUser()); };
+                if (sessijuSkaititajs == 1) { userId = Lietotajs(HelloUser()); };
                 sessijuSkaititajs++;
 				//------Viss izpildams kodz zemāk---------
 
@@ -38,13 +38,13 @@ namespace majasdarbs
 
 			int vertiba = 0;
 			string ievade = Console.ReadLine();
-			int robeza = Convert.ToInt16(ievade);
+			int robeza = Convert.ToInt32(ievade);
             
 			for (int i = 1; i <= robeza; i++)
             {
 				int oldVertiba = vertiba;
 				vertiba = vertiba + i;
-				Console.WriteLine("{0} = {2} + {1}", vertiba, i, oldVertiba);
+				Console.WriteLine("{2} + {1} = {0}", vertiba, i, oldVertiba);
             }
 
 			Console.WriteLine("{0}! = {1}", robeza, vertiba);
